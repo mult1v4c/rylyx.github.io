@@ -8,21 +8,25 @@
 	<head>
         <meta charset="utf-8" />
 		<title>New Tab</title>
+		<!-- Load Fontawesome Icons -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"/>
 	<body>
         <style type="text/css" media="all">
-            html, body
-            { margin:0; padding:0; }
-            html, body
-            { background:##f9f9fa; }
-            .row
-            { text-align:center; padding-top:200px;}
-            .row .column 
-            { display: inline; letter-spacing:0em;}
-            .row .column a
-            { font-size: 80px; color:rgba(0,0,0,0); opacity:.5}
-            .row .column a:not(:hover)
-            { filter: grayscale(100%); transition: opacity 1s; }
+            html, body {
+            	background:#f9f9fa;
+            	margin:0;
+            	padding:0;
+            }
+            a {
+            	font-size: 90px;
+            	color:rgba(0,0,0,0);
+            	filter:grayscale(0%);
+            }
+            a:not(:hover) {
+            	opacity: 0.5;
+            	transition: opacity 1s;
+            	filter:grayscale(100%);
+        	}
 
             .youtube    i{color:#cc6666;}
             .facebook   i{color:#81a2be;}
@@ -32,48 +36,53 @@
             .gdrive     i{color:#b5bd68;}
             .reddit     i{color:#de935f;}
             .leetx      i{color:#cc6666;}
+
+            #center {
+            	position: fixed;
+			    top: 0px;
+			    left: 0;
+			    z-index: 999;
+			    width: 100%;
+			    height: 100vh;
+			    text-align: center;
+        		display: table;
+
+            }
+            #center span {
+            	padding-left: 70px;
+            	padding-right: 70px;
+			    vertical-align:middle;
+ 				display: table-cell;
+			}
+
         </style>
-        <div class="row">
-            <div class="column">
-                <a href="https://www.youtube.com/" class="youtube">
-                    <i class="fab fa-youtube"></i>
-                </a>
-            </div>
-            <div class="column">
-                <a href="https://www.facebook.com/" class="facebook">
-                    <i class="fab fa-facebook-square"></i>
-                </a>
-            </div>
-            <div class="column">
-                <a href="https://www.messenger.com/" class="messenger">
-                    <i class="fab fa-facebook-messenger"></i>
-                </a>
-            </div>
-            <div class="column">
-                <a href="https://www.twitter.com/" class="twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </div>
-            <div class="column">
-                <a href="https://mail.google.com/" class="gmail">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-            <div class="column">
-                <a href="https://drive.google.com/" class="gdrive">
-                    <i class="fab fa-google-drive"></i>
-                </a>
-            </div>
-            <div class="column">
-                <a href="https://www.reddit.com/" class="reddit">
-                    <i class="fab fa-reddit-square"></i>
-                </a>
-            </div>
-            <div class="column">
-                <a href="https://1337x.to/" class="leetx">
-                    <i class="fas fa-skull-crossbones"></i>
-                </a>
-            </div>
-        </div>
-	</body>
+<div id="center">
+	<span>
+		<a href="https://www.youtube.com/" class="youtube">
+			<i class="fab fa-youtube"></i>
+		</a>
+		<a href="https://www.facebook.com/" class="facebook">
+			<i class="fab fa-facebook-square"></i>
+		</a>
+		<a href="https://www.messenger.com/" class="messenger">
+			<i class="fab fa-facebook-messenger"></i>
+		</a>
+		<a href="https://www.twitter.com/" class="twitter">
+			<i class="fab fa-twitter"></i>
+		</a>
+		<a href="https://mail.google.com/" class="gmail">
+			<i class="fas fa-envelope"></i>
+		</a>
+		<a href="https://drive.google.com/" class="gdrive">
+			<i class="fab fa-google-drive"></i>
+		</a>
+		<a href="https://www.reddit.com/" class="reddit">
+			<i class="fab fa-reddit-square"></i>
+		</a>
+		<a href="https://1337x.to/" class="leetx">
+			<i class="fas fa-skull-crossbones"></i>
+		</a>
+	</span>
+</div>
+</body>
 </html>
